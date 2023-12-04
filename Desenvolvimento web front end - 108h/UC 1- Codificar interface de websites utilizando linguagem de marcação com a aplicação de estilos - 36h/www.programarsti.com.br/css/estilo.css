@@ -1,0 +1,400 @@
+/* (*)Seletor Universal todos as tags usadas aqui vão se aplicar para todo o site */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/********************** corpo do site **************************/
+body {
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    font-size: 1em;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* será aplicada para todos os títulos do site, dá para usar com todas as tags comp (p) para ficar como padrão */
+h1,
+h2,
+h3 {
+    color: whitesmoke;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/************************** Rolagem suave *************************/
+html {
+    scroll-behavior: smooth;
+}
+
+/***************** Barra de Rolagem Personalizada **********************/
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #062350;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(#00ffff, #96ff00);
+    border-radius: 20px;
+}
+
+a {
+    margin: 15px;
+    color: white;
+    /* font-family: cursive; */
+}
+
+p {
+    color: white;
+    margin-left: 30px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 15px;
+}
+
+/**************************** cabeçalho ***********************/
+header {
+    background-color: none;
+    padding: 10px;
+    /* border: 4px groove #000000; */
+}
+
+header h1 {
+    color: whitesmoke;
+}
+
+header div.logo {
+    width: 60%;
+    display: inline-block;
+}
+
+header div.saudacao-senac-scs {
+    width: 35%;
+    display: inline-block;
+}
+
+header div.saudacao-senac-scs div#hora {
+    font-size: 12pt;
+    color: #ffffff;
+}
+
+header div.saudacao-senac-scs div#saudacao {
+    color: #ffffff;
+    font-size: 11pt;
+    font-style: italic;
+}
+
+header div.saudacao-senac-scs div#senac-scs {
+    color: #96ff00;
+    font-size: 2em;
+}
+
+/************************** navegação ***********************/
+nav {
+    background-color: #96ff00;
+    border-radius: 15px;
+    /* border: 4px groove black; */
+}
+
+/*********************** navegação da lista ******************/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+/******************* linhas *******************/
+nav ul li {
+    float: left;
+}
+
+/********************** NAV - links/botões navegação ********************/
+nav ul li a {
+    text-decoration: none;
+    color: #062350;
+    font-weight: bold;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 14px;
+    /* caso haver um fundo nos botões de navegação ficara mais suave a troca de cor EX:(transition: background 0.6s;) */
+}
+
+nav ul li a:hover {
+    color: white;
+    text-shadow: #062350 0px 0px 10px
+}
+
+/*************************** principal ********************/
+main {
+    background-color: none;
+}
+
+
+/******************* seções ************************/
+main section {
+    margin: 20px 0px;
+}
+
+main section>div {
+    text-align: right;
+    margin-top: 15px;
+}
+
+/************************* botoes para retornar ao topo *******************/
+main section div a {
+    margin: 0px;
+    color: #96ff00;
+    text-shadow: #96ff00 0px 0px 20px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-style: italic;
+    text-decoration: none;
+    padding: 30px 30px;
+}
+
+main section div a:hover {
+    color: #00ffff;
+    text-shadow: none;
+}
+
+/****************** artigos *****************/
+main section article {
+    margin: 20px 0;
+}
+
+/***************** para o texto detro dos artigos ************************/
+main section h2 {
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+main section article h3 {
+    color: #96ff00;
+    text-align: left;
+    font-weight: bold;
+}
+
+main section article p {
+    color: white;
+}
+
+/* se usar ">" ira ser usado apenas para "ol" EX: main section article > ol */
+main section article ol {
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 12.3pt;
+    margin: 10px 0;
+    list-style: lower-roman;
+    line-height: 18pt;
+}
+
+main section article ol li {
+    color: white;
+    margin-left: 44px;
+}
+
+main section article ul {
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 12.3pt;
+    margin: 10px 0;
+    list-style: disc;
+}
+
+main section article ul li {
+    color: white;
+    margin-left: 44px;
+}
+
+/*********************** botões para os exemplos ***********************/
+main section article ul li a {
+    margin: 0px;
+    color: white;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-style: italic;
+    text-decoration: none;
+    line-height: 20pt;
+    padding: 10px;
+}
+
+main section article ul li a:hover {
+    color: #96ff00;
+    text-shadow: #96ff00 0px 4px 10px;
+}
+
+/***************** Formatação formulário *********************/
+form {          
+    color: #ffffff;
+    font-size: 1em;
+    margin: 20px 0;
+    width: 100%;
+    float: left;
+}
+
+form div.etiqueta { 
+    font-weight: bold;
+    width: 30%;
+    text-align: right;
+    margin: 12px 5px 0 0;
+    float: left;
+}
+
+form div.campo{
+    width: 60%;
+    margin: 5px;
+    float: left;
+}
+
+form div.campo input, select,textarea{
+    width: 200px;
+    padding: 10px;
+    color: #00ffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #062350;
+} 
+
+form div.campo input:hover, select:hover, textarea:hover, input:focus, select:focus, textarea:focus {
+    border:  #00ffff;
+    box-shadow: 0px 0px 10px #00ffff;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+}
+
+form div.campo select {
+    width: 222px;
+}
+
+form div.campo textarea{
+    width: 444px;
+    height: 125px;
+    max-width: 444px;
+    min-width: 444px;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+form div.campo input.btn-enviar{
+    background-color: #96ff00;
+    color: #062350;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #062350
+}
+
+form div.campo input.btn-enviar:hover{
+    box-shadow: 0px 0px 10px #96ff00;
+}
+
+/********************** rodapé ***********************/
+footer {
+    background-color: #062350;
+    height: 150px;
+    float: left;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+footer div.logo-sistema {
+    width: 50%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+footer div.redes-sociais {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+
+}
+
+footer div.redes-sociais img {
+    margin: 5px;
+}
+
+/************** efeito girar ***************************/
+footer div.redes-sociais img.girar {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+footer div.redes-sociais img.girar:hover {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+
+/********************** filtro borrar ****************/
+footer div.redes-sociais img.borrar {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+footer div.redes-sociais img.borrar:hover {
+    -webkit-filter: blur(1.2px);
+    filter: blur(1.2px);
+}
+
+/******************** filtro escala ****************/
+footer div.redes-sociais img.escala {
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+}
+
+footer div.redes-sociais img.escala:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+/******************** efeito sombra ****************/
+footer div.redes-sociais img.sombra {
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+footer div.redes-sociais img.sombra:hover {
+    -webkit-filter: drop-shadow(5px 5px 2px black);
+    filter: drop-shadow(5px 5px 2px black);
+}
+
+/******************** efeito borda e arredondamento ****************/
+footer div.redes-sociais img.borda {
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+footer div.redes-sociais img.borda:hover {
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/******************** Transparência ****************/
+footer div.redes-sociais img.transparencia {
+    opacity: 1;
+    cursor: pointer;
+}
+
+footer div.redes-sociais img.transparencia:hover {
+    opacity: 0.5;
+}

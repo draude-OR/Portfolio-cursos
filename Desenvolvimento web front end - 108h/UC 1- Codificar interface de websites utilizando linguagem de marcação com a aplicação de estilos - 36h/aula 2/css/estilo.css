@@ -1,0 +1,105 @@
+/* (*)Seletor Universal todos as tags usadas aqui vão se aplicar para todo o site */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/********************** corpo do site **************************/
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: white;
+}
+
+/* será aplicada para todos os títulos do site, dá para usar com todas as tags comp (p) para ficar como padrão */
+h1, h2, h3 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+a {
+    margin: 15px;
+    font-family: cursive;
+    color: white;
+}
+
+/************************* cabeçalho ********************************/
+/* a tag para chamar para o CSS pode ser body, header..., porém só vai aparecer no site caso apareça a tag.
+Pode tambem ser chamado pela class, para conseguir reaproveitar em varias partes 
+Para puxar do HTML com ID usar # e com class . */
+header {
+    background-color: darkorchid;
+    /* border-width: 3px;
+    border-style: groove;
+    border-color: white; */
+    /* pode ser usado tudo em uma tag ou separadamente ^ */
+    border: 4px groove #000000;
+    border-radius: 15px;
+}
+
+/*********************** Título do site **************************/
+header h1 {
+    margin-left: 15px;
+}
+
+/****************************** Navegação **************************/
+nav {
+    background-color: rgb(255, 0, 0);
+    border: 4px solid #000000;
+    border-radius: 15px;
+}
+
+nav h1 {
+    margin-left: 15px;
+    color: black;
+}
+
+/********************* seção, caso queira ter caracteristicas diferentes para seção usar class *********************/
+section {
+    background-color: rgb(255, 204, 0);
+    border: 4px solid #000000;
+    border-radius: 15px;
+    height: 500px
+}
+
+section h2 {
+    color: black;
+    margin-left: 15px;
+}
+
+section p {
+    color: black;
+    margin-left: 15px;
+    ;
+}
+
+/**************************** artigos *****************************/
+section article {
+    background-color: rgb(0, 81, 255);
+    border: 4px solid#000000;
+    border-radius: 15px;
+    height: 200px;
+}
+
+section article h3 {
+    color: white;
+    margin: 15px;
+}
+
+section article p {
+    color: white;
+    margin: 15px;
+}
+
+/************************ rodapé *************************/
+footer {
+    background-color: rgb(27, 186, 27);
+    border: 4px solid#000000;
+    border-radius: 15px;
+}
+
+footer p {
+    color: black;
+    margin: 15px;
+}
