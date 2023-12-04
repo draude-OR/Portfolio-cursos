@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11</title>
+</head>
+
+<body>
+    <h1>
+        Faça um programa que leia um texto informado pelo usuário. Em seguida, calcule o número de
+        caracteres desse texto e exiba uma mensagem conforme abaixo:<br>
+        Se o número de caracteres for de 0 até 10 O texto: x é PEQUENO, tem y caracteres<br>
+        Se o número de caracteres for de 11 até 50 O texto: x é MÉDIO, tem y caracteres<br>
+        Se o número de caracteres for maior que 50 O texto: x é GRANDE, tem y caracteres
+    </h1>
+
+    <div>
+        <label>Insira seu texto aqui:</label>
+    </div>
+    <div>
+        <textarea id="texto" placeholder="Texto..."></textarea>
+    </div>
+    <button onclick="exibirResultado()">Resultado</button>
+
+    <script>
+        function exibirResultado() {
+            var texto = document.getElementById("texto").value
+            var msg = ""
+
+            if (texto.length <= 10) {
+                msg = `O texto: ${texto} é PEQUENO, tem ${texto.length} caracteres`
+            } else if (texto.length <= 50) {
+                msg = `O texto: ${texto} é MÉDIO, tem ${texto.length} caracteres`
+            } else {
+                msg = `O texto:  
+******************************************************
+                ${texto}              
+******************************************************        
+                é GRANDE, tem ${texto.length} caracteres`
+            }
+
+            alert(msg)
+        }
+    </script>
+</body>
+
+</html>

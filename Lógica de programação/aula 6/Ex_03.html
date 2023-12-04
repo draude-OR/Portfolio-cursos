@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 6</title>
+
+</head>
+
+<body>
+    <h1>Crie um programa para ler 3 valores (considere que não serão informados valores iguais) e escreva
+        o maior deles.
+    </h1>
+
+    <div>
+        <label>Valor 1: </label>
+        <input type="number" id="valor1" name="valor1" placeholder="45">
+    </div><br>
+    <div>
+        <label>Valor 2: </label>
+        <input type="number" id="valor2" name="valor2" placeholder="53">
+    </div><br>
+    <div>
+        <label>Valor 3:</label>
+        <input type="number" id="valor3" name="valor3" placeholder="89">
+    </div><br>
+    <button onclick="exibirValores()">Calcular</button>
+
+    <script>
+        function exibirValores() {
+            var valor1 = parseFloat(document.getElementById("valor1").value)
+            var valor2 = parseFloat(document.getElementById("valor2").value)
+            var valor3 = parseFloat(document.getElementById("valor3").value)
+            var msg = ""
+
+            if (valor1 > valor2 && valor1 > valor3) {
+                msg = "O maior valor é " + valor1
+            } else if (valor2 > valor1 && valor2 > valor3) {
+                msg = "O maior valor é " + valor2
+            } else {
+                msg = "O maior valo é " + valor3
+            }
+
+            alert(msg)
+        }
+
+    </script>
+
+</body>
+
+</html>

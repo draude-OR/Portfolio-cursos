@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa que leia o nome de uma pessoa.Após, exiba uma mensagem informando se esse nome foi
+        escrito em letras maiúsculas, minúsculas ou em maiúsculas e minúsculas
+    </h1>
+
+    <div>
+        <label>Insira o seu nome completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="João Bandeira">
+    </div><br>
+    <button onclick="exibirDados()">Exibir resultado</button>
+
+    <script>
+        function exibirDados() {
+            var nome = document.getElementById("nome").value
+            msg = ""
+            if (nome == nome.toUpperCase()) {
+                msg = `O nome ${nome}, foi escrito apenas com letras maiúsculas.`
+            } else if (nome == nome.toLowerCase()) {
+                msg = `O nome ${nome}, foi escrito apenas com letras minúsculas.`
+            } else {
+                msg = `O nome ${nome}, foi escrito apenas com letras maiúsculas e minúsculas.`
+            }
+            alert(msg)
+        }
+
+    </script>
+</body>
+
+</html>

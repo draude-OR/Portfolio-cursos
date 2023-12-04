@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11</title>
+</head>
+
+<body>
+    <h2>
+        Faça um aplicativo que leia o preço de 10 produtos.
+        Após, exiba na tela a média dos preços, o maior e
+        o menor preço digitado.
+
+    </h2>
+
+    <script>
+        window.onload = function(){
+           var contador = 1
+           var valor = 0
+           var maior = 0
+           var menor = 0
+           var media = 0
+            while (contador <= 10) {
+                valor = Number(prompt(`Informe o ${contador}º valor: `))    
+                if(valor < menor || contador == 1){
+                    menor = valor
+                }
+                if(valor > maior || contador == 1){
+                    maior = valor
+                }
+                media += valor
+                contador++
+            }
+            media = media / 10
+            alert(`
+A média dos preços é: ${media.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+O maior valor é: ${maior.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+O menor Valor é: ${menor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            `)
+
+        }
+    </script>
+</body>
+
+</html>

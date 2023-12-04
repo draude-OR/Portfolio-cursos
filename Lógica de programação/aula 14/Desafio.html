@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 13</title>
+</head>
+
+<body>
+    <h1>
+        A prefeitura de uma cidade deseja fazer uma pesquisa entre seus habitantes. Faça um algoritmo para
+        coletar dados sobre o salário e número de filhos de cada habitante e após as leituras, escrever:<br>
+        a) Média de salário da população<br>
+        b) Média do número de filhos<br>
+        c) Percentual de pessoas com salário menor que o mínimo (R$ 1.212,00)<br>
+        d) Percentual de pessoas com salário maior que o mínimo (R$ 1.212,00)<br>
+        Obs.: O final da leituras dos dados se dará com a entrada de um “salário negativo”.
+    </h1>
+
+    <script>
+        window.onload = function () {
+            var salario = 0
+            var numeroDeFilhos = 0
+            var contador = 0
+            var mediaSalario = 0
+            var mediaFilhos = 0
+            var somaSalario = 0
+            var somaFilhos = 0
+            var porcSalAteMinimo = 0
+            var contPorcSalAteMinimo = 0
+            var porcSalAcimaMinimo = 0
+            var contPorcSalAcimaMinimo = 0
+
+            while (salario >= 0) {
+                salario = Number(prompt("Informe o salário:"))
+                if (salario >= 0) {
+                    numeroDeFilhos = Number(prompt("Informe o número de filhos:"))
+                    contador++
+                    somaSalario += salario
+                    somaFilhos += numeroDeFilhos
+                    if (salario <= 1212) {
+                        contPorcSalAteMinimo++
+                    } else {
+                        contPorcSalAcimaMinimo++
+                    }
+                }
+            }
+            mediaSalario = (somaSalario / contador)
+            mediaFilhos = (somaFilhos / contador).toFixed(2)
+            porcSalAteMinimo = (contPorcSalAteMinimo / contPorcSalAteMinimo * 100).toFixed(2)
+            porcSalAcimaMinimo = (contPorcSalAcimaMinimo / contPorcSalAcimaMinimo * 100).toFixed(2)
+            alert(`Total de cadastros: ${contador}
+Média de salário da população: ${mediaSalario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+Media do número de filhos da população: ${mediaFilhos}
+Percentual de pessoas com salário menor que o mínimo (R$ 1.212,00): ${porcSalAteMinimo}%
+Percentual de pessoas com salário maior que o mínimo (R$ 1.212,00): ${porcSalAcimaMinimo}%`)
+        }
+
+    </script>
+
+</body>
+
+</html>

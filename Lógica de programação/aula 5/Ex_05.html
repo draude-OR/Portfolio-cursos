@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 5</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa para ler 3 notas de um aluno. Calcular a média aritmética e escrever uma mensagem
+        que diga se o aluno foi ou não aprovado. (Considerar que nota maior ou igual a 6 o aluno é aprovado)
+        Escrever também a média calculada
+    </h1>
+
+    <div>
+        <label>nota 1: </label>
+        <input type="number" name="nota1" id="nota1" placeholder="8">
+    </div>
+    <div>
+        <label>nota 2: </label>
+        <input type="number" name="nota2" id="nota2" placeholder="6">
+    </div>
+    <div>
+        <label>nota 3: </label>
+        <input type="number" name="nota3" id="nota3" placeholder="9">
+    </div>
+    <input type="button" name="botao" id="botao" value="calcular" onclick="exibirmedia()">
+
+    <script>
+        function exibirmedia() {
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var nota3 = parseFloat(document.getElementById("nota3").value)
+            var media = (nota1 + nota2 + nota3) / 3
+            var msg = ""
+
+            if (media >= 6) {
+                msg = "O aluno foi APROVADO, sua média foi " + media
+            } else {
+                msg = "O aluno foi REPROVADO, sua média foi " + media
+            }
+
+            alert(msg)
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 12</title>
+</head>
+
+<body>
+    <H1>
+        Ler um valor inteiro (aceitar somente valores entre 1 e 10) e 
+        escrever a tabuada de 1 a 10 do valor lido
+    </H1>
+
+    <script>
+        window.onload = function () {
+            var tabuada = Number(prompt(`Informe um valor(entre 1 e 10): `))
+            var numero = 0
+            var contador = 1
+            
+            for (var contador = 1; contador <= 10; contador++) {
+                numero = tabuada * contador
+                alert(`A tabuada do ${tabuada} * ${contador} = ${numero}`)
+            }
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

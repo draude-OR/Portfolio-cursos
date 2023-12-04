@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8</title>
+</head>
+
+<body>
+    <h1>
+        ditar o título mestre
+        Exercício 1 Utilizando os Tipos de Caixa de Diálogo, crie um algoritmo que exiba ao usuário,
+        quando o mesmo acessar o site, as seguintes informações:<br>
+        • Qual é o seu nome?<br>
+        • Olá, boa tarde “nome”!<br>
+        • Vamos fazer o curso de desenvolvimento Web Front-End?<br>
+        Ok (true) = Que legal “nome”, vamos aprender CSS e HTML.<br>
+        Cancelar (false) = Que pena “nome”, vamos deixar para um
+        próximo curso aprender CSS e HTML.
+    </h1>
+
+    <script>
+        window.onload = function () {
+            var nome = prompt("Qual é seu nome?")
+            alert("Olá, boa tarde " + nome + "!")
+
+            var dialogo = confirm("Vamos fazer o curso de desenvolvimento Web Front-End?")
+            if (dialogo) {
+                alert("Que legal " + nome + ", vamos aprender CSS e HTML.")
+            }
+            else {
+                alert("Que pena " + nome + ", vamos deixar para um próximo curso aprender CSS e HTML.")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

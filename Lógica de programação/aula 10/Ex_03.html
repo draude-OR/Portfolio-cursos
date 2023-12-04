@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>
+        Desenvolva um programa que leia o valor inicial da contagem, o valor final e o incremento, mostrando
+        em seguida todos os valores no intervalo: <br>
+        Ex.: Digite o valor inicial da contagem: 5<br>
+        Digite o valor final da contagem: 20<br>
+        Digite o valor do incremento: 3<br>
+        5 8 11 14 17 20 Acabou
+    </h1>
+
+    <div>
+        <label>Digite o valor inicial da contagem:</label>
+        <input type="number" id="inicial" name="inicial" placeholder="13">
+    </div><br>
+    <div>
+        <label>Digite o valor final da contagem:</label>
+        <input type="number" id="final" name="final" placeholder="20">
+    </div><br>
+    <div>
+        <label>Digite o valor do incremento:</label>
+        <input type="number" id="incremento" name="incremento" placeholder="3">
+    </div><br>
+    <button onclick="exibirContagem()">Contagem</button>
+
+    <script>
+        function exibirContagem() {
+            var inicial = Number(document.getElementById("inicial").value)
+            var final = Number(document.getElementById("final").value)
+            var incremento = Number(document.getElementById("incremento").value)
+
+            for (var contador = inicial; contador <= final; contador += incremento) {
+                alert(contador)
+            }
+            alert("Acabou!!!")
+        }
+
+    </script>
+
+</body>
+
+</html>

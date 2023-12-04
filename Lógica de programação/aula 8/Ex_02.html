@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8</title>
+</head>
+
+<body>
+    <h1>
+        O Índice de Massa Corporal é um valor calculado baseado na altura e no peso de uma pessoa. De acordo
+        com o valor do IMC podemos classificar o indivíduo dentro de certas faixas.<br>
+        < 18,5 Abaixo do Peso<br>
+            >= 18,5 e < 25 Peso Normal<br>
+                >= 25 e < 30 Sobrepeso<br>
+                    >= 30 e < 35 Obesidade Grau I<br>
+                        >= 35 e < 40 Obesidade Grau II<br>
+                            > 40 Obesidade Grau III<br>
+                            Crie um programa para calcular o IMC.<br>
+                            Obs. O IMC é calculado pela expressão: peso/altura²
+    </h1>
+
+    <script>
+        window.onload = function () {
+            var altura = Number(prompt("Insira sua altura? (em metros)"))
+            var peso = Number(prompt("Insira seu peso (em quilograma)"))
+            var IMC = (peso / (altura * altura)).toFixed(2)
+            msg = ""
+
+            if (IMC < 18.5) {
+                msg = "O seu IMC é " + IMC + ", você está ABAIXO DO PESO"
+            } else if (IMC < 25) {
+                msg = "O seu IMC é " + IMC + ", você está com o PESO NORMAL"
+            } else if (IMC < 30) {
+                msg = "O seu IMC é " + IMC + ", você está SOBREPESO"
+            } else if (IMC < 35) {
+                msg = "O seu IMC é " + IMC + ", você está com OBESIDADE GRAU I"
+            } else if (IMC < 40) {
+                msg = "O seu IMC é " + IMC + ", você está com OBESIDADE GRAU II"
+            } else {
+                msg = "O seu IMC é " + IMC + ", você está com OBESIDADE GRAU III"
+            }
+
+            alert(msg)
+        }
+    </script>
+
+</body>
+
+</html>

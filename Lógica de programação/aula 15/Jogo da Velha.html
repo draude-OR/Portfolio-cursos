@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 14</title>
+
+    <style>
+        .linhaBotoes {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .botaoJogoDaVelha {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            font-size: 100pt;
+            background-color: darkgrey;
+        }
+
+
+        .linhaTitulo {
+            display: flex;
+            justify-content: center;
+            font-size: 27pt;
+            font-family: Showcard Gothic;
+            color: rgb(255, 255, 255);
+        }
+
+
+        .botaoReniciar {
+            width: 150px;
+            height: 60px;
+            font-size: 15pt;
+            font-family: Showcard Gothic;
+            background-color: darkgrey;
+        }
+
+
+        .ganhador {
+            color: rgb(0, 255, 115);
+            font-weight: bold;
+
+        }
+
+        .backgroud {
+            background-color: rgb(42, 36, 36);
+        }
+    </style>
+
+</head>
+
+<body class="backgroud">
+    <h1 class="linhaTitulo">Jogo da velha</h1>
+
+    <div class="linhaBotoes">
+        <input type="button" id="j1" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j1')">
+        <input type="button" id="j2" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j2')">
+        <input type="button" id="j3" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j3')">
+    </div>
+    <div class="linhaBotoes">
+        <input type="button" id="j4" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j4')">
+        <input type="button" id="j5" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j5')">
+        <input type="button" id="j6" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j6')">
+    </div>
+    <div class="linhaBotoes">
+        <input type="button" id="j7" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j7')">
+        <input type="button" id="j8" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j8')">
+        <input type="button" id="j9" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j9')">
+    </div>
+    <div>
+        <button onclick="resetarJogo()" class="botaoReniciar">Reiniciar Jogo</button>
+    </div>
+
+
+    <script>
+        var jogada = ""
+            // função para X começar a jogada
+        window.onload = function () {
+            jogada = "X"
+        }
+// função para intercalar jogada
+        function jogarComXouO(botao) {
+            if (document.getElementById(botao).value == "") {
+                if (jogada == "X") {
+                    document.getElementById(botao).value = jogada
+                    jogada = "O"
+                } else {
+                    document.getElementById(botao).value = jogada
+                    jogada = "X"
+                }
+
+
+                var j1 = document.getElementById("j1").value;
+                var j2 = document.getElementById("j2").value;
+                var j3 = document.getElementById("j3").value;
+                var j4 = document.getElementById("j4").value;
+                var j5 = document.getElementById("j5").value;
+                var j6 = document.getElementById("j6").value;
+                var j7 = document.getElementById("j7").value;
+                var j8 = document.getElementById("j8").value;
+                var j9 = document.getElementById("j9").value;
+
+                // descobrir ganhador 
+                var mensagemRetorno = "";
+                var houveVencedorOuDeuVelha = false;
+                if (j1 == j2 && j2 == j3 && j1 != "") {
+                    mensagemRetorno = `A jogada ${j1} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true;
+                    // destacar o ganhador 
+                    document.getElementById("j1").classList.add("ganhador");
+                    document.getElementById("j2").classList.add("ganhador");
+                    document.getElementById("j3").classList.add("ganhador");
+                } else if (j4 == j5 && j5 == j6 && j4 != "") {
+                    mensagemRetorno = `A jogada ${j4} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j4").classList.add("ganhador");
+                    document.getElementById("j5").classList.add("ganhador");
+                    document.getElementById("j6").classList.add("ganhador");
+                } else if (j7 == j8 && j8 == j9 && j7 != "") {
+                    mensagemRetorno = `A jogada ${j7} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j7").classList.add("ganhador");
+                    document.getElementById("j8").classList.add("ganhador");
+                    document.getElementById("j9").classList.add("ganhador");
+                } else if (j1 == j4 && j4 == j7 && j1 != "") {
+                    mensagemRetorno = `A jogada ${j1} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j1").classList.add("ganhador");
+                    document.getElementById("j4").classList.add("ganhador");
+                    document.getElementById("j7").classList.add("ganhador");
+                } else if (j2 == j5 && j5 == j8 && j2 != "") {
+                    mensagemRetorno = `A jogada ${j2} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j2").classList.add("ganhador");
+                    document.getElementById("j5").classList.add("ganhador");
+                    document.getElementById("j8").classList.add("ganhador");
+                } else if (j3 == j6 && j6 == j9 && j3 != "") {
+                    mensagemRetorno = `A jogada ${j3} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j3").classList.add("ganhador");
+                    document.getElementById("j6").classList.add("ganhador");
+                    document.getElementById("j9").classList.add("ganhador");
+                } else if (j1 == j5 && j5 == j9 && j1 != "") {
+                    mensagemRetorno = `A jogada ${j1} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j1").classList.add("ganhador");
+                    document.getElementById("j5").classList.add("ganhador");
+                    document.getElementById("j9").classList.add("ganhador");
+                } else if (j3 == j5 && j5 == j7 && j3 != "") {
+                    mensagemRetorno = `A jogada ${j3} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true
+                    document.getElementById("j3").classList.add("ganhador");
+                    document.getElementById("j5").classList.add("ganhador");
+                    document.getElementById("j7").classList.add("ganhador");
+                    // Caso o jogo dê velha
+                } else if (j1 != "" && j2 != "" && j3 != "" && j4 != "" &&
+                    j5 != "" && j6 != "" && j7 != "" && j8 != "" && j9 != "") {
+                    mensagemRetorno = `O jogo deu velha!`
+                    houveVencedorOuDeuVelha = true
+                }
+
+                // após haver um vencedor desabilita os botões
+                if (houveVencedorOuDeuVelha == true) {
+                    alert(mensagemRetorno)
+                    document.getElementById("j1").disabled = true
+                    document.getElementById("j2").disabled = true
+                    document.getElementById("j3").disabled = true
+                    document.getElementById("j4").disabled = true
+                    document.getElementById("j5").disabled = true
+                    document.getElementById("j6").disabled = true
+                    document.getElementById("j7").disabled = true
+                    document.getElementById("j8").disabled = true
+                    document.getElementById("j9").disabled = true
+
+                }
+
+            } else {
+                alert("Já jogou!!!")
+            }
+
+        }
+        // função para resetar o jogo
+        function resetarJogo() {
+            document.location.reload(true);
+        }
+    </script>
+
+</body>
+
+</html>

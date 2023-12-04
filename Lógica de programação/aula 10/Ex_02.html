@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10</title>
+</head>
+
+<body>
+    <h1>
+        Crie um algoritmo que mostre uma contagem regressiva de um valor informado pelo usuário até 1,
+        marcando os números que forem divisíveis por 4, conforme mostrado abaixo:<br>
+        Digite um valor: 20<br>
+        [20] 19 18 17 [16] 15 14 13 [12] 11 10 ... [4] 3 2 1<br>
+    </h1>
+
+    <script>
+        window.onload = function () {
+            var numero = prompt("Informe um valor:")
+
+            for (var contador = numero; contador >= 1; contador--) {
+                if (contador % 4 == 0) {
+                    alert("[" + contador + "]")
+                } else {
+                    alert(contador)
+                }
+
+            }
+            alert("Acabou!!!")
+
+        }
+    </script>
+
+</body>
+
+</html>

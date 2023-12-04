@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 4</title>
+
+</head>
+
+<body>
+    <h1>
+        Faça um algoritimo que leia o quanto de dinheiro uma pessoa
+        possui em reais. Após, converta e mostre quantos dólares e
+        euros ela pode comprar
+        Considere os valores:<br>
+        Dólar: 5,23<br>
+        Euro: 5,15
+    </h1>
+
+
+    <label>Insira o valor em reais: </label>
+    <input type="number" name="real" id="real" placeholder="100.00">
+    <input type="button" id="botao" name="botao" value="resultado" onclick="exibirresultado()">
+
+    <script>
+        function exibirresultado (){
+            var real = parseInt (document.getElementById("real").value)
+            var dolar = (real / 5.23).toFixed(2)
+            var euro = (real / 5.15).toFixed(2)
+
+            alert("você possui R$" + real + ". Após os valroes serem convertidos: \nUS$: " + dolar +
+            "\nEuro: " + euro + "")
+        }
+
+    </script>
+
+</body>
+
+</html>

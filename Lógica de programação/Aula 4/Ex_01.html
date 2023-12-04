@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 4</title>
+
+</head>
+
+<body>
+    <h1>
+        Escreva um algoritimo que leia e armazene um valor para a
+        variável A e outro valor para a variável B.<br>
+        A seguir utilizando apenas atribuições entre variáveis
+        troque os seus conteúdos fazendo com que o valor que está em A<br>
+        passe para B e vice-versa.<br>
+        Ao final, exiba um outro alerta com os valores que ficaram armazenados nas variáveis A e B.<br>
+
+        Ex:<br>
+        A = 10<br>
+        B = 20<br>
+        O valor de A é 10 e o valor de B é: 20<br>
+        O valor de A é 20 e o valor de B é: 10<br>
+
+    </h1>
+    <div>
+        <label>Valor A:</label>
+        <input type="number" name="valora" id="valora" placeholder="10">
+    </div><br>
+    <label>Valor B</label>
+    <input type="number" name="valorb" id="valorb" placeholder="20">
+    <div><br>
+        <input type="button" name="botao" id="botao" value="resultado" onclick="exibirresultado()">
+    </div>
+
+    <script>
+        function exibirresultado() {
+            var valorum = document.getElementById("valora").value
+            var valordois = document.getElementById("valorb").value
+            var valortres = valorum
+
+            alert("A = " + valorum +
+                "\nB = " + valordois +
+                "\nO valor de A é " + valorum + " e o valor de B é " + valordois + "")
+
+            valorum = valordois
+            valordois = valortres
+
+            alert("A = " + valorum +
+                "\nB = " + valordois +
+                "\nO valor de A é " + valorum + " e o valor de B é " + valordois + "")
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 7</title>
+</head>
+
+<body>
+    <h1>
+        Desenvolva um programa que leia o nome de um funcionário, seu salário e quantos anos ele trabalha na
+        empresa. Calcule e mostre seu novo salário, reajustado de acordo com a tabela a seguir:
+        Até 3 anos de empresa Aumento de 3%<br>
+        Acima de 3 até 10 anos Aumento de 6%<br>
+        Acima de 10 anos Aumento de 12%
+    </h1>
+    <div>
+        <label>Insira o nome do funcionário:</label>
+        <input type="text" id="nome" name="nome" placeholder="Bruno santos">
+    </div><br>
+    <div>
+        <label>Insira a salário:</label>
+        <input type="number" id="salario" name="salario" placeholder="1500">
+    </div><br>
+    <div>
+        <label>Insira há quantos anos ele trabalha na empresa:</label>
+        <input type="number" id="anosTrabalhados" name="anosTrabalhados" placeholder="6">
+    </div><br>
+    <button onclick="calcularNovoSalario()">Calcular reajuste</button>
+
+    <script>
+        function calcularNovoSalario() {
+            var nome = document.getElementById("nome").value
+            var salario = Number(document.getElementById("salario").value)
+            var anosTrabalhados = Number(document.getElementById("anosTrabalhados").value)
+            var reajuste3Anos = salario * 1.03
+            var reajusteAteDezAnos = salario * 1.06
+            var reajusteMais10Anos = salario * 1.12
+            var msg = ""
+
+            if (anosTrabalhados <= 3) {
+                msg = "O seu novo salario é: R$ " + reajuste3Anos + "\n Seu antigo salario era de: R$ " + salario
+            } else if (anosTrabalhados <= 10) {
+                msg = "O seu novo salario é: R$ " + reajusteAteDezAnos + "\n Seu antigo salario era de: R$ " + salario
+            } else {
+                msg = "O seu novo salario é: R$ " + reajuste10Anos + "\n Seu antigo salario era de: R$ " + salario
+            }
+
+            alert(msg)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 4</title>
+
+</head>
+
+<body>
+    <h1>
+        Escreva um algoritimo para ler o nome de uma cidade, o número total de eleitores, o número<br>
+        de votos válidos, brancos e nulos. Calcular e escrever o percentual que cada um representa em <br>
+        relação ao total de eleitores.
+
+    </h1>
+    <div>
+        <label>Nome da cidade:</label>
+        <input type="text" name="cidade" id="cidade" placeholder="santa cruz do sul">
+    </div><br>
+    <div>
+        <label>Número total de eleitores:</label>
+        <input type="number" name="eleitores" id="eleitores" placeholder="100000">
+    </div><br>
+    <div>
+        <label>Número de votos válidos:</label>
+        <input type="number" name="validos" id="validos" placeholder="70000">
+    </div><br>
+    <div>
+        <label>Número de votos brancos:</label>
+        <input type="number" name="brancos" id="brancos" placeholder="20000">
+    </div><br>
+    <div>
+        <label>Número de votos nulos:</label>
+        <input type="number" name="nulos" id="nulos" placeholder="10000">
+    </div><br>
+    <input type="button" name="botao" id="botao" value="calcular" onclick="exibircalculo()">
+
+    <script>
+        function exibircalculo() {
+            var cidade = document.getElementById("cidade").value
+            var eleitores = document.getElementById("eleitores").value
+            var validos = document.getElementById("validos").value
+            var brancos = document.getElementById("brancos").value
+            var nulos = document.getElementById("nulos").value
+
+            var porcentagemValidos = (validos / eleitores * 100).toFixed(2)
+            var porcentagemBrancos = (brancos / eleitores * 100).toFixed(2)
+            var porcentagemNulos = (nulos / eleitores * 100).toFixed(2)
+
+            alert("" + cidade + " obteve " + eleitores + " eleitores, os percentuais foram: \n Votos validos: "
+                + porcentagemValidos + "%\n Votos em branco: "
+                + porcentagemBrancos + "%\n Votos nulos: "
+                + porcentagemNulos + "%")
+        }
+    </script>
+
+</body>
+
+</html>

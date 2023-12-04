@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aula 2</title>
+
+</head>
+
+<body>
+    <h2>
+        Faça um programa que leia o nome de uma pessoa,
+        a idade e a altura.<br>
+        Após, mostre uma mensagem informando esses dados para o usuário
+    </h2>
+    <div>
+        <label>Primeiro nome:</label>
+        <input type="text" id="PrimeiroNome" name="nome" placeholder="Ex: Paulo ">
+    </div><br>
+    <div>
+        <label>Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Ex: da Silva fagundes">
+    </div><br>
+    <div>
+        <label>Idade:</label>
+        <input type="number" id="idade" name="idade" placeholder="Ex: 27">
+    </div>
+    <div><br>
+        <label>Altura</label>
+        <input type="number" id="altura" name="altura" placeholder="Ex: 1.88">
+    </div><br>
+    <input type="button" id="botao" name="botao" value="Exibir Dados" onclick="exibirDados()">
+
+
+    <script>
+        function exibirDados() {
+            var primeironome = document.getElementById("PrimeiroNome").value
+            var sobrenome = document.getElementById("sobrenome").value
+            var idade = document.getElementById("idade").value
+            var altura = document.getElementById("altura").value
+            
+            alert("O seu nome é: " + primeironome + 
+            "\nA sua sobrenome é: " + sobrenome + 
+            "\nA sua idade é: " + idade +
+            "\nA sua altura é: " + altura + ".")
+
+        }
+
+    </script>
+
+</body>
+
+
+</html>

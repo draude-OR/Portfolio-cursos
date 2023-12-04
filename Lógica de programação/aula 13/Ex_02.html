@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 13</title>
+</head>
+
+<body>
+    <h1>
+        Faça um programa que leia o número de linhas e colunas de uma matriz. Após, solicite ao
+        usuário, preencher com dados essa matriz. Ao final, imprima os dados informados.
+    </h1>
+
+    <script>
+        window.onload = function () {
+            var colunas = Number(prompt(`Insira o número de colunas:`))
+            var linhas = Number(prompt(`Insira o número de linhas:`))
+            var matriz = []
+
+            for (var lin = 0; lin < linhas; lin++) {
+                matriz[lin] = []
+                for (var col = 0; col < colunas; col++) {
+                    matriz[lin][col] = prompt(`Insira o ${col + 1}º valor da ${lin + 1}ª linha.`)
+                }
+            }
+            console.table(matriz)
+            for (var lin = 0; lin < linhas; lin++) {
+                for (var col = 0; col < colunas; col++) {
+                    alert(`O valor da ${lin + 1}ª linha e da ${col + 1}ª coluna é: ${matriz[lin][col]}`)
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

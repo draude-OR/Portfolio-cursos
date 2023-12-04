@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 6</title>
+
+</head>
+
+<body>
+    <h1>Escreva um algoritmo que leia dois valores e escreva qual valor é o maior deles. Caso sejam iguais,
+        escreva o valor com a mensagem “Os valores são iguais”.
+    </h1>
+
+    <div>
+        <label>Valor 1:</label>
+        <input type="number" id="valor1" name="valor1" placeholder="49">
+    </div><br>
+    <div>
+        <label>Valor 2:</label>
+        <input type="number" id="valor2" name="valor2" placeholder="579">
+    </div><br>
+    <input type="button" id="botao" name="botao" value="Calcular" onclick="resultadoValores()">
+
+    <script>
+        function resultadoValores() {
+            var valor1 = parseFloat(document.getElementById("valor1").value)
+            var valor2 = parseFloat(document.getElementById("valor2").value)
+            var msg = ""
+
+            if (valor1 > valor2) {
+                msg = "O valor maior é o " + valor1
+            } else if (valor1 < valor2) {
+                msg = "O valor maior é o " + valor2
+            } else {
+                msg = "Os valores são iguais"
+            }
+
+            alert(msg)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

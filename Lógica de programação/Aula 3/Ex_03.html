@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>aula 3</title>
+</head>
+
+<body>
+    <h1>Crie um algoritimo qu eleia um número decimal e mostre na tela o dobro
+        desse valor e também a sua terça parte.<br>
+        Ex:<br>
+        Digite um número decimal: 7.5<br>
+        O dobro de 7.5 é: 15<br>
+        A terça parte de 7.5 é: 5<br>
+    </h1>
+    <div>
+        <label>Digite um número decimal:</label>
+        <input type="number" id="numero" name="numero" placeholder="7.5">
+        <input type="button" name="botao" id="botao" value="resultado" onclick="resultadodosvaloroes()">
+    </div>
+
+    <script>
+        function resultadodosvaloroes() {
+            let numero = parseFloat(document.getElementById("numero").value)
+            let dobro = numero * 2
+            let terçaparte = (numero / 3).toFixed(2)
+
+            alert("Numero decimal: " + numero +
+                "\n O dobro de " + numero + " é: " + dobro +
+                "\n A terça parte de " + numero + " é: " + terçaparte + "")
+
+        }
+    </script>
+
+</body>
+
+</html>

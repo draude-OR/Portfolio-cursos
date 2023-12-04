@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+
+<body>
+    <h2>
+        Faça um programa que leia um número inteiro e mostre o seu amtecessor e o seu sucessor.<br>
+        Ex:<br>
+        Digite um número: 10<br>
+        O antecessor de 10 é: 9<br>
+        O sucessor de 10 é: 11
+    </h2>
+
+    <div>
+        <label>Digite um número:</label>
+        <input type="number" name="numero" id="numero" placeholder="25">
+        <input type="button" name="botao" id="botao" value="resultado" onclick="exibirresultado()">
+    </div>
+
+    <script>
+        function exibirresultado() {
+            let numero = parseInt(document.getElementById("numero").value)
+            let antecessor = numero - 1
+            let sucessor = numero + 1
+
+            alert("Digite um número: " + numero +
+                "\nO antecessor de " + numero + " é: " + antecessor +
+                "\nO sucessor de " + numero + " é: " + sucessor + "")
+
+        }
+    </script>
+</body>
+
+</html>

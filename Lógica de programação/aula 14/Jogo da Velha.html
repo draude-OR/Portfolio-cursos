@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 14</title>
+
+    <style>
+        .linhaBotoes {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .botaoJogoDaVelha {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            font-size: 100pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Crie um jogo da velha</h1>
+
+    <div class="linhaBotoes">
+        <input type="button" id="j1" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j1')">
+        <input type="button" id="j2" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j2')">
+        <input type="button" id="j3" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j3')">
+    </div>
+    <div class="linhaBotoes">
+        <input type="button" id="j4" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j4')">
+        <input type="button" id="j5" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j5')">
+        <input type="button" id="j6" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j6')">
+    </div>
+    <div class="linhaBotoes">
+        <input type="button" id="j7" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j7')">
+        <input type="button" id="j8" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j8')">
+        <input type="button" id="j9" value="" class="botaoJogoDaVelha" onclick="jogarComXouO('j9')">
+    </div>
+
+    <script>
+        var jogada = ""
+        window.onload = function () {
+            jogada = "X"
+        }
+        function jogarComXouO(botao) {
+            if (document.getElementById(botao).value == "") {
+                if (jogada == "X") {
+                    document.getElementById(botao).value = jogada
+                    jogada = "O"
+                } else {
+                    document.getElementById(botao).value = jogada
+                    jogada = "X"
+                }
+
+                var j1 = document.getElementById("j1").value;
+                var j2 = document.getElementById("j2").value;
+                var j3 = document.getElementById("j3").value;
+                var j4 = document.getElementById("j4").value;
+                var j5 = document.getElementById("j5").value;
+                var j6 = document.getElementById("j6").value;
+                var j7 = document.getElementById("j7").value;
+                var j8 = document.getElementById("j8").value;
+                var j9 = document.getElementById("j9").value;
+                
+
+                var mensagemRetorno = "";
+                var houveVencedorOuDeuVelha = false;
+                if (j1 == j2 && j2 == j3 && j1 != "") {
+                    mensagemRetorno = `A jogada ${j1} foi a vencedora!`
+                    houveVencedorOuDeuVelha = true;
+                } else if (j1 == j4 && j4 == j7 && j1 != ""){
+                    mensagemRetorno = `A jogada ${j1} foi a vencedora!`
+                }
+
+                if (houveVencedorOuDeuVelha == true) {
+                    alert(mensagemRetorno)
+                }
+
+            } else {
+                alert("Já jogou!!!")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

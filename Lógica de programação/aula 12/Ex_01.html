@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>aula 12</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa que preencha automaticamente um vetor com 8 nomes de produtos. Após, imprimir
+        o vetor em ordem inversa.
+    </h1>
+
+    <script>
+        window.onload = function () {
+            let x = 7
+            let produtos = ['Manga', "Abacaxi", "Pêssego", "Uva", "Limão", "Feijão", "Arroz", "Maça"]
+
+            while (x >= 0) {
+                alert(`Nome do ${x + 1}º produto é: ${produtos[x]}`)
+                x--
+            }
+
+            alert(produtos)
+            console.log(produtos)
+        }
+
+    </script>
+
+</body>
+
+</html>

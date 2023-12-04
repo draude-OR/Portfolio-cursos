@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10</title>
+</head>
+
+<body>
+    <h1>
+        O programa anterior vai ter um problema quando digitarmos o valor inicial maior que o final.
+        Resolva esse problema com um código que funcione em qualquer situação.
+    </h1>
+
+
+    <div>
+        <label>Digite o valor inicial da contagem:</label>
+        <input type="number" id="inicial" name="inicial" placeholder="13">
+    </div><br>
+    <div>
+        <label>Digite o valor final da contagem:</label>
+        <input type="number" id="final" name="final" placeholder="20">
+    </div><br>
+    <div>
+        <label>Digite o valor do incremento:</label>
+        <input type="number" id="incremento" name="incremento" placeholder="3">
+    </div><br>
+    <button onclick="exibirContagem()">Contagem</button>
+
+    <script>
+        function exibirContagem() {
+            var inicial = Number(document.getElementById("inicial").value)
+            var final = Number(document.getElementById("final").value)
+
+            if (inicial < final) {
+                var incremento = Number(document.getElementById("incremento").value)
+                for (var contador = inicial; contador <= final; contador += incremento) {
+                    alert(contador)
+                }
+                alert("Acabou!!!")
+            } else {
+                alert("O valor final está maior do que o inicial, CUIDADO")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

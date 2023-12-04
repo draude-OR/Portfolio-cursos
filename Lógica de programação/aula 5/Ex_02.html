@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 5</title>
+
+</head>
+
+<body>
+    <h1>
+        O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do
+        distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do
+        distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de
+        fábrica de um carro, calcular e escrever o custo final ao consumidor.
+    </h1>
+
+    <label>Custo de fabrica do carro: </label>
+    <input type="nuber" id="fabrica" name="fabrica" placeholder="30000">
+    <input type="button" id="botao" name="botao" value="calcular" onclick="custofinal()">
+
+    <script>
+        function custofinal(){
+            var fabrica = parseFloat(document.getElementById("fabrica").value)
+
+            var distribuidor = (fabrica * 28 / 100) + fabrica 
+            var impostos = (fabrica * 45 / 100) + distribuidor
+        
+            alert("O custo de fabrica do carro é de R$" + fabrica +
+            ", após todos os imposos serem taxados fica R$" + impostos + "")
+        }
+    </script>
+
+</body>
+
+</html>

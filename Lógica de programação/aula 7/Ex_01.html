@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 7</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa que leia a velocidade de um veículo. Caso ultrapasse 80 km/h, exiba uma mensagem
+        informando que o condutor foi multado, incluindo o tipo de infração e o valor da multa conforme a
+        tabela abaixo:<br>
+        Infração Média / Até 20% / RS 130,16<br>
+        Infração Grave / Acima de 20% até 50% / RS 195,23<br>
+        Infração Gravíssima / Acima de 50% / R$ 880,41<br>
+    </h1>
+    <div>
+        <label>Insira a velocidade do veículo (em km/h):</label>
+        <input type="number" id="velocidade" name="valocidade" placeholder="80">
+    </div><br>
+    <input type="button" name="botao" id="botao" value="calcular" onclick="exibirInfracao()">
+
+    <script>
+        function exibirInfracao() {
+            var velocidade = parseFloat(document.getElementById("velocidade").value)
+            var velocidadePermetida = 80
+            var velocidadeInfraçaoMedia = velocidadePermetida * 1.2
+            var velocidadeInfraçaoGrave = velocidadePermetida * 1.5
+            var valorInfraçãoMedia = 130.16
+            var valorInfraçãoGrave = 195.23
+            var valorInfraçãoGravissima = 880.41
+            var msg = ""
+
+
+
+            if (velocidade > velocidadePermetida) {
+                if (velocidade <= velocidadeInfraçaoMedia) {
+                    msg = "Codutor foi multado! \nInfração Média\nO valor da multa: R$ " + valorInfraçãoMedia
+                } else if (velocidade <= velocidadeInfraçaoGrave) {
+                    msg = "Codutor foi multado! \nInfração Grave\nO valor da multa: R$ " + valorInfraçãoGrave
+                } else {
+                    msg = "Codutor foi multado! \nInfração Gravissima\nO valor da multa: R$ " + valorInfraçãoGravissima
+                }
+            } else {
+                msg = "Condutor NÃO foi multado!"
+            }
+
+
+            alert(msg)
+
+        }
+    </script>
+</body>
+
+</html>

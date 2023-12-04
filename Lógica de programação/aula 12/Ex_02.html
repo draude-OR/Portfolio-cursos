@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 12</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa para ler o nome de 10 alunos earmazene os dados em um vetor. Em seguida, imprima os
+        nomes armazenados.
+    </h1>
+
+    <script>
+        window.onload = function () {
+
+            let x = 0
+            let y = 0
+            let nomeAlunos = []
+            while (x < 10) {
+                nomeAlunos[x] = prompt(`Insira o nome do ${x}º aluno:`)
+                x++
+            }
+            while (y < 10) {
+                alert(`O nome do ${y+1}º aluno é: ${nomeAlunos[y]}`)
+                y++
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10</title>
+</head>
+
+<body>
+
+    <h1>
+        Faça um programa que leia um número inicial e um número final. Após, calcule e mostre o somatório
+        entre eles.<br>
+        Ex:<br>
+        Valor Inicial: 5<br>
+        Valor Final: 10<br>
+        Resultado: 5 + 6 + 7 + 8 + 9 + 10 = ?
+    </h1>
+
+    <div>
+        <label>Insira o valor inicial:</label>
+        <input type="number" id="inicial" name="inicial" placeholder="5">
+    </div><br>
+    <div>
+        <label>Insir o valor final:</label>
+        <input type="number" id="final" name="final" placeholder="10">
+    </div><br>
+    <button onclick="exibirSomatorio()">Somar</button>
+
+    <script>
+        function exibirSomatorio() {
+            var inicial = Number(document.getElementById("inicial").value)
+            var final = Number(document.getElementById("final").value)
+            var soma = 0
+            var contador = 1
+            /*OU FAZER ASSIM: for(var contador = 1; contador <= final; contador ++) soma += contador 
+                        */
+            do {
+                soma += contador
+                contador++
+            } while (contador <= final)
+
+            alert("O somatório dos valores foram: " + soma)
+        }
+
+    </script>
+
+</body>
+
+</html>

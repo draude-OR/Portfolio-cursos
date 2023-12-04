@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 5</title>
+</head>
+
+<body>
+    <h1>
+        Crie um algoritmo que leia um determinado valor, após exiba na tela se este é par ou ímpar.
+    </h1>
+
+    <div>
+        <label>Informe o número: </label>
+        <input type="number" id="numero" name="numero" placeholder="68">
+    </div><br>
+    <button onclick="VerificarParImpar()">Verrificar Par ou ímpar</button>
+
+    <script>
+        function VerificarParImpar() {
+            var numero = parseFloat(document.getElementById("numero").value)
+            var msg = ""
+
+            if (numero % 2 == 0) {
+                msg = "O número " + numero + " é PAR"
+            } else {
+                msg = "O número " + numero + " é ÍMPAR"
+            }
+                alert(msg)
+        }
+    </script>
+
+</body>
+
+</html>

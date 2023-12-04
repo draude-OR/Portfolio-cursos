@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 7</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa para ler o salário fixo e o valor das vendas efetuadas pelo vendedor de uma empresa.
+        Sabendo-se que ele recebe uma comissão de 3% sobre o total das vendas até R$ 1.500,00 mais 5% sobre o
+        que ultrapassar este valor, calcular e escrever o seu salário total.
+    </h1>
+
+    <div>
+        <label>Insira o salário fixo:</label>
+        <input type="number" id="salarioFixo" name="salarioFixo" placeholder="1500">
+    </div><br>
+    <div>
+        <label>Insira o valor das vendas efetuadas pelo vendedor:</label>
+        <input type="number" id="vendas" name="vendas" placeholder="10000">
+    </div><br>
+    <button onclick="exibirCalculoSalario()">Calcular</button>
+
+    <script>
+        function exibirCalculoSalario() {
+            var salarioFixo = Number(document.getElementById("salarioFixo").value)
+            var valorVendas = Number(document.getElementById("vendas").value)
+            var comissao = 0
+            var salarioTotal = 0
+            var valorFixo = 1500
+
+
+            if (valorVendas <= valorFixo) {
+                comissao = valorVendas * 0.03
+                salarioTotal = salarioFixo + comissao
+            } else {
+                comissao = (valorFixo * 0.03) + (valorVendas - VALORFI) * 0.05
+                salarioTotal = salarioFixo + comissao
+            }
+
+            alert("o salário é de R$ " + salarioFixo +
+                "\nA comissão é de R$ " + comissao +
+                "\nO salário total é de R$ " + salarioTotal)
+        }
+
+    </script>
+</body>
+
+</html>

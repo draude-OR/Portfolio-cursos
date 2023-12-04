@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11</title>
+
+</head>
+
+<body>
+    <h1>
+        Crie um programa que leia o nome, a idade e a altura de uma pessoa. Após, exiba esses dados na tela
+        através de Template Strings.
+    </h1>
+
+    <div>
+        <label>Insira o nome completo:</label>
+        <input type="text" name="nome" id="nome" placeholder="Carlos da Silva">
+    </div><br>
+    <div>
+        <label>Insira a idade:</label>
+        <input type="number" name="idade" id="idade" placeholder="18">
+    </div><br>
+    <div>
+        <label>Insira a altura(em centimetros)</label>
+        <input type="number" name="altura" id="altura" placeholder="188">
+    </div><br>
+    <button onclick="exibirDados()">Exibir os Dados</button>
+
+    <script>
+        function exibirDados() {
+            var nome = document.getElementById("nome").value
+            var idade = Number(document.getElementById("idade").value)
+            var altura = Number(document.getElementById("altura").value)
+
+            alert(`Meu nome é ${nome}, tenho ${idade} anos de idade e ${altura} de altura.`)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

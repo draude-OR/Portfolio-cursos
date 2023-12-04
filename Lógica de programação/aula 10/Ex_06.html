@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10</title>
+</head>
+
+<body>
+
+    <h1>
+        Desenvolva um aplicativo que mostre na tela o resultado da expressão 500 + 450 + 400 + ... + 100 + 50
+    </h1>
+
+    <script>
+        window.onload = function () {
+            var soma = 0
+            var contador = 500
+
+            do {
+                soma += contador
+                contador -= 50
+            } while (contador >= 50)
+
+            alert("A soma da expressão 500 + 450 + 400 + ... + 100 + 50 é: " + soma)
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+var contador = 1
+do {
+contador--
+} while (contador <= 500 )
