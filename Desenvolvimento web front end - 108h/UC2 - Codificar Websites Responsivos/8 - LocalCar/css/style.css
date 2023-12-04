@@ -1,0 +1,926 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* cores backgroud */
+.bg-primary-color {
+    background-color: white;
+}
+
+.bg-secondary-color {
+    background-color: #ececec;
+}
+
+.bg-dark-color {
+    background-color: #1c1c1c;
+}
+
+/* cores de fontes */
+.primary-color {
+    color: #1c1c1c;
+}
+
+.secondary-color {
+    color: #9a9a9a;
+}
+
+/******************************** barra de navegação *****************************************/
+#navbar {
+    border-bottom: 1px solid #7a7a7a;
+}
+
+#navbar a {
+    color: black;
+}
+
+#navbar a:hover {
+    color: #ad2323;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid #ad2323;
+    color: #ad2323;
+}
+
+/* ajustar o logo e o texto */
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+/* Alterar nome da empresa */
+.navbar-brand span {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+/* Alterar o tamanho da área do menu */
+#navbarNav .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#navbarNav .nav-item {
+    margin: 0 2em;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/****************************************** Carousel **************************************/
+#slider {
+    margin-top: 8em;
+}
+
+/* Subir o Caption(texto) */
+.carousel-caption {
+    bottom: 12em;
+}
+
+/* Mudar Título */
+.carousel-caption h5 {
+    font-size: 3em;
+    text-shadow: black 3px 3px 2px;
+}
+
+/* Mudar a Discrição */
+.carousel-caption p {
+    font-size: 1.1em;
+    text-shadow: black 2px 2px 1px;
+}
+
+/* Mudar o botão */
+.carousel-caption .btn {
+    border-radius: 0px;
+    padding: 0.5em 2em;
+    font-size: 1.1em;
+    margin-top: 1em;
+    border: none;
+}
+
+/* Alterar setas */
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #ececec;
+    font-size: 3em;
+    text-shadow: #1c1c1c 2px 2px 1px;
+}
+
+/* Formatar os Indicadores */
+.carousel-indicators [data-bs-target] {
+    background-color: #9a9a9a;
+    opacity: 0.7;
+}
+
+/* Posição dos Indicadores */
+.carousel-indicators {
+    bottom: 8em;
+}
+
+/* Formatar Indicador Ativo */
+.carousel-indicators .active {
+    background-color: #080808;
+}
+
+/********************************** MINI CARDS ********************************/
+.container .text-center {
+    padding: 0;
+}
+
+#mini-banners {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mini-banners .col {
+    padding: 0;
+}
+
+#mini-banners .card {
+    padding: 2em 1em;
+    margin-bottom: 1em;
+    border-radius: 0;
+}
+
+#mini-banners i {
+    font-size: 4em;
+    color: #726f6f;
+}
+
+#mini-banners .card-title {
+    margin-bottom: 1.5em;
+}
+
+#mini-banners .card-text {
+    text-align: justify;
+    font-size: 0.8em;
+    color: #9a9a9a;
+}
+
+#mini-banners .btn {
+    margin-top: 1.5em;
+    border-radius: 0;
+    padding: 0.4em 1.5em;
+    font-size: 0.9em;
+}
+
+#mini-banners .card-body {
+    height: 30vh;
+}
+
+/**************************** DESTAQUES *************************************/
+#destaque {
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+#destaque hr {
+    width: 7em;
+    border: 1px solid #ad2323;
+    opacity: 1;
+    margin-bottom: 0.5em;
+}
+
+#destaque .row {
+    margin-top: -1em;
+}
+
+#destaque .row .col-md-4 {
+    position: relative;
+    cursor: pointer;
+}
+
+#destaque .row .col-md-4 .conteudo-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94.7%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0.4;
+    transition: 0.5s;
+    margin: 0 12px;
+}
+
+#destaque .row .col-md-4 .conteudo-banner {
+    opacity: 0;
+}
+
+#destaque .row .col-md-4 a:hover>.conteudo-banner {
+    opacity: 0.9;
+}
+
+/***************************** importante *****************************/
+#importante {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+#importante hr {
+    width: 7em;
+    border: 1px solid #ad2323;
+    opacity: 1;
+    margin-bottom: 0.5em;
+}
+
+.posicionarImportante {
+    display: flex;
+    flex: row;
+}
+
+#importante .row {
+    margin-top: 2em;
+}
+
+#importante .row h3 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#importante .col-md-7 .btn {
+    border-radius: 0;
+    margin-top: 2em;
+    padding: 8px 30px;
+    font-size: 1em;
+}
+
+#info-numero h1 {
+    font-size: 3.5em;
+}
+
+/************************************ sobre ******************************/
+
+#sobre {
+    margin-bottom: 3em;
+}
+
+#sobre .col-md-7 .btn {
+    border-radius: 0;
+    padding: 8px 30px;
+    font-size: 1em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+#info-sobre {
+    margin-top: 1em;
+}
+
+#info-sobre p {
+    margin-left: 1em;
+}
+
+#info-sobre .col-4 p {
+    margin-left: 1em;
+}
+
+#info-sobre .col-4 h1 {
+    margin-left: 1em;
+    font-size: 2.2em;
+}
+
+#info-sobre .col-4 .secondary-color {
+    font-size: 0.9em;
+}
+
+#info-sobre h3 {
+    margin-left: 0.6em;
+    margin-top: 1em;
+}
+
+#sobre hr {
+    width: 7em;
+    border: 1px solid #ad2323;
+    opacity: 1;
+    margin-bottom: 0.5em;
+    margin-top: 3em;
+}
+
+/********************************** PRODUTOS ****************************/
+#produtos {
+    margin-top: 1.5em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#produtos img {
+    border-radius: 10px;
+}
+
+#produtos h2 {
+    margin-top: 2em;
+    text-align: start;
+    border-top: #ad2323 solid 2px;
+    width: 2em;
+}
+
+#texto-titulo {
+    text-align: start;
+    margin-top: -0.5em;
+}
+
+#produtos .col-md-4 h3 {
+    text-align: center;
+}
+
+#produtos .col-md-4 h4 {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+#produtos .col-md-4 p {
+    font-size: 0.9em;
+    width: 300;
+    color: #9a9a9a;
+}
+
+#produtos .col-md-4 h1 {
+    font-size: 2em;
+    margin-top: 2em;
+    margin-left: -0.3em;
+}
+
+#produtos i {
+    width: bold;
+}
+
+.cidade {
+    width: bold;
+}
+
+#produtos hr {
+    width: 100%;
+    margin-top: -1em;
+}
+
+#carro {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 15px 1px 15px;
+    height: 88vh;
+}
+
+#produtos .col-md-4 a{
+    text-decoration: none;
+    color: black;
+}
+
+/***************************servicos ************************/
+#servicos hr {
+    width: 7em;
+    border: 1px solid #ad2323;
+    opacity: 1;
+    margin-bottom: 0.5em;
+    margin-top: 3em;
+}
+
+#servicos #mini-banners i {
+    color: #ad2323;
+}
+
+#depoimento img {
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 12px;
+    width: 120px;
+    height: 200px;
+}
+
+/************************************ pagina produto **********************/
+.bg-fundo-produto {
+    background-color: #a9a9a923;
+}
+
+#pagina-produto {
+    background-color: #a9a9a923;
+}
+
+#pagina-produto .carousel {
+    margin-bottom: 3.5em;
+    margin-top: 2em;
+}
+
+#pagina-produto .carousel-indicators {
+    bottom: 0em;
+}
+
+#pagina-produto hr {
+    width: 7em;
+    border: 1px solid #ad2323;
+    margin-top: 8em;
+    opacity: 1;
+    margin-top: 7em;
+    margin-bottom: 0;
+    margin-left: 1em;
+    background-color: red;
+}
+
+#pagina-produto h2{
+    margin-bottom: 0.1em;
+    margin-left: 0.2em;
+}
+
+#info-produto {
+    margin-top: 2em;
+    margin-bottom: 5em;
+    height: 108vh;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+
+#info-produto h1{
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+#info-produto h2{
+    width: bold;
+    font-size: 2.5em;
+    margin-top: 1em;
+    color: #ad2323;
+}
+
+#info-produto span{
+    margin-left: 0.5em;
+}
+
+#info-produto p{
+    margin-top: 1.3em;
+    width: bold;
+}
+
+#info-produto input {
+    border: 2px solid #a9a9a957;
+}
+
+#info-produto textarea {
+    border: 2px solid #a9a9a957;
+    width: 350px;
+    height: 20vh;
+    resize: none;
+}
+
+#info-produto .btn{
+    width: 100%;
+    height: 3em;
+    font-size: 1.1em;
+}
+
+#info-produto .col-12 hr {
+    margin-top: 1em;
+    border: 1px solid #9a9a9a;
+    width: 100%;
+    margin-left: -0.8em;
+}
+
+#info-produto .col-12 p {
+    text-align: center;
+    color: #9a9a9a;
+}
+
+#info-produto .col-12 a {
+    text-decoration: none;
+    color: #9a9a9a;
+}
+
+#info-produto .col-12 a:hover {
+    color: #ad2323;
+    transition: 0.3s;
+}
+
+#info-produto .col-12 i {
+    margin-right: 0.5em;
+}
+
+/**************************** FOOTER ***************************************/
+#backgroud {
+    background-color: #080808;
+}
+
+#footer {
+    background-color: black
+}
+
+#logo-footer {
+    margin-top: 2.3em;
+}
+
+#footer h5 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-left: 8px;
+}
+
+#footer p {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.opacidade a {
+    text-decoration: none;
+}
+
+.opacidade a:hover {
+    opacity: 50%;
+}
+
+#footer input {
+    border-radius: 0;
+    width: 23em;
+    height: 2em;
+}
+
+#footer .btn {
+    margin-top: 1em;
+    border-radius: 0;
+    background-color: #272727;
+    transition: 0.2s;
+    margin-bottom: 2em;
+}
+
+#footer .btn:hover {
+    opacity: 70%;
+}
+
+#footer #contatos {
+    display: flex;
+}
+
+.contato i {
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    margin-left: 8px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: white;
+}
+
+.contato a {
+    color: white;
+}
+
+
+#linha-separar {
+    border-bottom: 1px solid white;
+}
+
+#Redes-sociais a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#Redes-sociais i {
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+#Redes-sociais img {
+    margin-left: 8px;
+}
+
+#Redes-sociais {
+    margin-bottom: -3em;
+}
+
+
+#copy {
+    margin-top: 3em;
+}
+
+#copy p {
+    width: bold;
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
+
+/***************************************************** MIDIA QUERY *****************************************************/
+
+@media (min-width: 768px) {
+    #produtos .col-md-4 h4 {
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #produtos .col-md-4 p {
+        font-size: 0.7em;
+        width: 300;
+        color: #9a9a9a;
+    }
+
+    #produtos .col-md-4 h1 {
+        font-size: 1.7em;
+    }
+
+    #carro {
+        height: 60vh;
+    }
+
+    #mini-banners {
+        flex-direction: row;
+        margin: -5em 3em 0 3em;
+    }
+
+    #mini-banners .card {
+        margin: 0.7em;
+    }
+
+    #linha-separar {
+        border-bottom: none;
+        border-right: 1px solid white;
+    }
+
+    #importante .row h3 {
+        margin-top: 0;
+    }
+
+    #info-sobre {
+        margin-top: 0;
+    }
+
+    #info-sobre .col-4 h1 {
+        margin-left: 1em;
+        font-size: 2.2em;
+    }
+
+    #info-sobre p {
+        font-size: 0.9em;
+    }
+
+    #copy p {
+        text-align: start;
+        font-size: 1.1em;
+    }
+
+    /* servicos */
+    #servicos #mini-banners {
+        flex-direction: row;
+        margin: 7em 3em 0 3em;
+    }
+
+    /* pagina produto */
+    #info-produto textarea {
+        width: 215px;
+        height: 20vh;
+        resize: none;
+    }
+
+    #info-produto {
+        height: 107vh;
+    }
+
+    #info-produto .col-12 hr {
+        width: 242px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    #carro {
+        height: 60vh;
+    }
+    
+    #info-produto textarea {
+        width: 295px;
+        height: 20vh;
+        resize: none;
+    }
+
+    #info-produto {
+        height: 100vh;
+    }
+
+    #info-produto .col-12 hr {
+        width: 320px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #mini-banners {
+        flex-direction: row;
+        margin: -5em 3em 0 3em;
+    }
+
+    #mini-banners .card {
+        margin: 0.7em;
+    }
+
+    #linha-separar {
+        border-bottom: none;
+        border-right: 1px solid white;
+    }
+
+    #importante .row h3 {
+        margin-top: 0;
+    }
+
+    #info-sobre p {
+        font-size: 1em;
+    }
+
+    #info-numero h1 {
+        font-size: 4em;
+    }
+
+    #info-sobre .col-4 h1 {
+        font-size: 3em;
+    }
+
+    #info-sobre .col-4 .secondary-color {
+        font-size: 1em;
+    }
+
+    #copy p {
+        text-align: start;
+        font-size: 1.1em;
+    }
+
+
+    /*********************** produtos  *******************/
+    #produtos hr {
+        width: 98%;
+    }
+
+    #produtos .col-md-4 h4 {
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #produtos .col-md-4 p {
+        font-size: 0.7em;
+        width: 300;
+        color: #9a9a9a;
+    }
+
+    #produtos .col-md-4 h1 {
+        font-size: 2em;
+    }
+
+    #carro {
+        height: 48vh;
+    }
+
+    .escala-produto {
+        background-color: #ffff;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-in;
+        transform: scale(1);
+    }
+
+    .escala-produto a {
+        display: none;
+    }
+
+    .escala-produto:hover {
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 30px;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.01);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.01);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.01);
+        transition: all 200ms ease-in;
+        transform: scale(1.01);
+        cursor: pointer;
+    }
+
+    .escala-produto:hover a {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    /*********************** produtos  *******************/
+    #produtos hr {
+        width: 98%;
+    }
+
+    #carro {
+        height: 48vh;
+    }
+
+    #pagina-produto .carousel {
+        width: 600px;
+        margin-bottom: 3.5em;
+        margin-top: 2em;
+    }
+
+    #info-produto textarea {
+        width: 355px;
+        height: 20vh;
+        resize: none;
+    }
+
+    #info-produto .col-12 hr {
+        width: 380px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /*********************** produtos  *******************/
+    #produtos hr {
+        width: 98%;
+    }
+
+    #carro {
+        height: 68vh;
+    }
+
+    #info-produto {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 1400px) {
+    #info-produto textarea {
+        width: 415px;
+        height: 20vh;
+        resize: none;
+    }
+
+    #info-produto .col-12 hr {
+        width: 442px;
+    }
+}
+
+@media (min-width: 1600px){
+    #info-produto {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 1800px) {
+
+    /*********************** produtos  *******************/
+    #info-sobre .col-4 h1 {
+        font-size: 4em;
+    }
+
+    #produtos hr {
+        width: 98%;
+    }
+
+    #produtos .col-md-4 h4 {
+        margin-top: 0.5em;
+        text-align: center;
+    }
+
+    #produtos .col-md-4 p {
+        font-size: 0.9em;
+        width: 300;
+        color: #9a9a9a;
+    }
+
+    #produtos .col-md-4 h1 {
+        font-size: 2em;
+        margin-top: 2em;
+        margin-left: -0.3em;
+    }
+
+    #carro {
+        height: 62vh;
+    }
+
+    #info-produto {
+        height: 99vh;
+    }
+
+}
+
+@media (min-width: 1900px) {
+    #info-produto {
+        height: 93vh;
+    }
+}
