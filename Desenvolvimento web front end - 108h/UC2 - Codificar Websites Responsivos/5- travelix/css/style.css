@@ -1,0 +1,410 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* gerais para o body */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+/* rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* barra de rolagem */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0851cd, #15c3ff, #cb3d77);
+    border-radius: 20px;
+}
+
+/* formatar titulos */
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
+}
+
+/**************************** formatar nav ******************************/
+nav {
+    background-color: #ffff;
+}
+
+.posicionarLogin {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav div>a {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 16px;
+    font-size: 20pt;
+    color: #344cb9;
+    text-decoration: none;
+}
+
+nav div ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 16px;
+}
+
+nav div ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav div ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #344cb9;
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav div ul li a:hover {
+    color: #ffff;
+    background-color: #344cb9;
+    transition: color 0.5s;
+    transition: background 200ms;
+    text-shadow: white 1px 1px 10px;
+}
+
+/* menu suspenso(dropdown) */
+nav div ul li ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+nav div ul li:hover ul {
+    display: flex;
+}
+
+nav div ul li ul li {
+    color: #ffff;
+    background-color: #344cb9;
+    font-style: italic;
+    z-index: 1;
+}
+
+nav div ul li ul li a {
+    color: white;
+}
+
+/************************ formatar header ************************/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-image: url("../img/header/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+header h1 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-style: italic;
+    color: white;
+    font-size: 25px;
+    text-shadow: 5px 10px 10px black;
+}
+
+header h2 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+    text-shadow: 5px 10px 10px black;
+}
+
+/************ formatar section passagens ***************/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.posicionarImagem {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.posicionarTexto {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+section p {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    font-family: 'Roboto';
+    font-size: 15pt;
+    font-weight: 500;
+    text-align: center;
+}
+
+section h1 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-size: 25pt;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 30pt;
+    text-align: center;
+    padding: 1px;
+}
+
+section h3 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-size: 15pt;
+    text-align: center;
+    padding: 1px;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background-color: #344cb9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+footer div a {
+    text-decoration: none;
+    color: #ffff;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+footer div a:hover {
+    opacity: 60%;
+}
+
+footer h3 {
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-size: 14pt;
+    padding: 5px;
+}
+
+footer p {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 11pt;
+    flex-direction: row;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+footer img {
+    padding: 5px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+/************************************************** media ********************************************/
+
+@media screen and (min-width:768px) {
+
+    /************ nav *************/
+    nav {
+        height: 130px;
+    }
+
+    nav div {
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: auto;
+        align-items: start;
+    }
+
+    nav div ul {
+        align-items: start;
+        flex-direction: row;
+        width: 70%;
+        margin-top: 35px;
+    }
+
+    nav div ul li ul li {
+        border: none;
+    }
+
+    /************ hedader **********/
+    header {
+        justify-content: center;
+        height: 50vh;
+    }
+
+    header h1 {
+        font-size: 40px;
+        max-width: 1200px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header h2 {
+        font-size: 30px;
+        margin-left: auto;
+        max-width: 1200px;
+        width: 100%;
+        margin-right: auto;
+    }
+
+    /************* section ****************/
+    section {
+        flex-direction: row;
+        margin: auto;
+        flex-wrap: wrap;
+        max-width: 1200px;
+    }
+
+    section h1 {
+        text-align: start;
+        width: 100%;
+    }
+
+    section div {
+        flex-grow: 1;
+    }
+
+    /******************* footer **********************/
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 3px;
+        text-align: center;
+        height: 120px;
+    }
+
+    footer div#contatos {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        max-width: 1200px;
+    }
+
+    footer div#redesociais {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        max-width: 1200px;
+    }
+
+    footer p#copy {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .bloco-programas {
+        padding: 2em 2em;
+        background-color: #ffff;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-in;
+        transform: scale(1);
+    }
+
+    .bloco-programas a {
+        display: none;
+
+
+    }
+
+    .bloco-programas:hover {
+        box-shadow: 0px 0px 40px #000000;
+        border-radius: 30px;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.01);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.01);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.01);
+        transition: all 200ms ease-in;
+        transform: scale(1.01);
+    }
+
+    .bloco-programas:hover a {
+        display: block;
+    }
+
+}

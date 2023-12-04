@@ -1,0 +1,59 @@
+/* variaveis globais */
+/* div */
+:root {
+    /* paleta de cores */
+    --cor-fundo: #fffb00;
+    --cor-texto: #0033ff;
+    --cor-titulo: #1ebf23;
+
+    /* div */
+    --tamanho-div: 800px;
+    --cor-de-fundo-div: var(--cor-fundo);
+    --margem-div: auto;
+
+    /* h1 */
+    --cor-da-fonte-titulo: var(--cor-titulo);
+    --tamanho-titulo: 2.5rem;
+    --alinhamento-titulo: center;
+
+    /* familia de fontes */
+    --familia-fontes: times;
+    --familia-de-fonte-titulo: arial;
+    --familia-de-fonte-texto: verdana;
+
+    /* p */
+    --tamanho-texto: 1.5rem;
+    --cor-da-fonte-texto: var(--cor-texto);
+
+    /* button */
+    --padding-botao: 25px;
+    --largura-botao: 100%;
+    --cor-fundo-botao: var(--cor-titulo);
+    --cor-texto-botao: var(--cor-fundo);
+}
+
+
+div {
+    width: var(--tamanho-div);
+    background-color: var(--cor-de-fundo-div);
+    margin: var(--margem-div);
+}
+
+h1 {
+    color: var(--cor-da-fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    text-align: var(--alinhamento-titulo);
+    font-family: var(--familia-de-fonte-titulo);
+}
+
+p {
+    font-size: var(--tamanho-texto);
+    color: var(--cor-da-fonte-texto);
+}
+
+button {
+    padding: var(--padding-botao);
+    background-color: var(--cor-fundo-botao);
+    color: var(--cor-texto-botao);
+    border-radius: 10px
+}
