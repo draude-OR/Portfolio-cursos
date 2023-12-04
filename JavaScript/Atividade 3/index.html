@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuários</title>
+    <link rel="shortcut icon" href="img/ui-checks.svg" type="image/x-icon" id="icon">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- link css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Castro de Usuários</h1>
+    </div>
+    
+    <div class="container">
+        <div class="row mt-5">
+
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark" title="Cadastrar-novo-usuario"
+                    onclick="ExibirCadastro('cadastrar')">Novo <i class="bi bi-file-earmark-plus"></i></button>
+            </div>
+
+            <div class="col-md-10">
+                <form action="" class="row ocultar" id="formCadastro">
+                    <div class="col">
+                        <label for="">Nome</label>
+                        <input type="text" class="form-control" onkeypress="return validaLetras (event)" id="nome" placeholder="Digite o Nome">
+                    </div>
+                    <div class="col">
+                        <label for="">Sobrenome</label>
+                        <input type="text" class="form-control" onkeypress="return validaLetras (event)" id="sobrenome" placeholder="Digite o Sobrenome">
+                    </div>
+                    <div class="col">
+                        <label for="">Idade</label>
+                        <input type="text" maxlength="3" onkeypress="return validaNumeros(event)" class="form-control" id="idade" placeholder="19">
+                    </div>
+                    <div class="col">
+                        <label for="">Escolaridade</label>
+                        <select name="escolaridade" class="form-select" id="escolaridade">
+                            <option value="" selected>--</option>
+                            <option value="ensino-medio-incompleto">Ensino Médio incompleto</option>
+                            <option value="ensino-medio-completo">Ensino Médio completo</option>
+                            <option value="ensino-fundamnetal-completo">Ensino Fundamental Completo</option>
+                            <option value="ensino-fundamnetal-incompleto">Ensino Fundamental Incompleto</option>
+                            <option value="superior-completo">Superior Completo</option>
+                            <option value="superior-incompleto">Superior Incompleto</option>
+                            <option value="le-e-escreve">Lê e escreve</option>
+                            <option value="analfabeto">Analfabeto</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <button type="button" class="btn btn-success" id="botaoCadastrar"
+                            onclick="AdicionarRegistro()">Cadastrar <i class="bi bi-person-plus"></i></button>
+                        <button type="button" class="btn btn-success" id="botaoEditar"
+                            onclick="AlterarRegistro()">Alterar <i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-danger mt-2" id="botaoCancelar" onclick="Cancelar()">Cancelar <i
+                                class="bi bi-x-circle-fill"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+        <table class="table" id="tabelaCadastro">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Idade</th>
+                    <th>Escolaridade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

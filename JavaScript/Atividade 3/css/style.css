@@ -1,0 +1,49 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.header {
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+    background-color: rgb(29, 28, 28)
+}
+
+.ocultar {
+    display: none !important;
+}
+
+.btn {
+    width: 120px;
+}
+
+.btn-primary {
+    margin-right: 10px;
+    background-color: rgb(63, 64, 65);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgba(63, 64, 65, 0.877);
+}
+
+.btn-success {
+    background-color: rgb(5, 138, 38);
+    border: none;
+}
+
+.btn-danger {
+    background-color: rgb(204, 5, 5);
+    border: none;
+}
+
+tr.edicao td {
+    background-color: rgba(63, 64, 65, 0.137);
+    font-weight: bold;
+}
