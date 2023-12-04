@@ -1,0 +1,18 @@
+/* pure.CSS */
+.pure-button {
+    background-color: midnightblue;
+    color: white;
+}
+
+.pure-button:hover {
+    background-color: rgba(25, 25, 112, 0.829);
+}
+
+.card-image {
+    width: 400px;
+}
+
+.card{
+    width: 400px;
+}
+
