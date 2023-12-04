@@ -1,0 +1,99 @@
+h1 {
+    color: blue;
+}
+
+h4 {
+    color: darkgoldenrod;
+}
+
+h5 {
+   background-color: chocolate; 
+}
+/************* sintaxe  ***************/
+@media screen and (max-width: 500px) {
+
+    /* max width = telas maiores que ... */
+    h1 {
+        color: green;
+    }
+}
+
+/********* Todas as possibilidades ********/
+/* Modos: screen, print, speech, all  */
+@media print and (max-width: 600px) {
+    h1 {
+        color: red;
+    }
+}
+
+/*********** Todos os modos **************/
+@media (max-width:700px) {
+    h2 {
+        color: aqua;
+    }
+}
+
+/********** Mobile First ************/
+@media (min-width:300px) {
+    h2 {
+        color: purple;
+    }
+}
+
+/********** AND na media query *******/
+@media (min-width:300px) and (max-width:400px) {
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+/********** Orientation **********/
+@media (orientation: landscape) {
+    h3 {
+        color: chartreuse;
+        background-color: firebrick;
+    }
+}
+
+/********** OR na MQ **********/
+@media (max-width:400px), (orientation: landscape) {
+    h3 {
+        font-size: 5rem;
+    }
+}
+
+/************* Atenção com a MQ **********/
+@media (min-width: 600px) {
+    h4 {
+        color: fuchsia;
+    }
+}
+
+/********** breakpoints *************/
+/* 480px - 768px (tablet)*/
+@media (min-width: 480px) {
+    h5 {
+        background-color: cadetblue;
+    }
+}
+
+/* 768px - 1024px (Laptops)*/
+@media (min-width: 768px) {
+    h5 {
+        background-color: crimson;
+    }
+}
+
+/* 1024px - 1200px (desktop)*/
+@media (min-width: 1024px) {
+    h5 {
+        background-color: darkgreen;
+    }
+}
+
+/* Acima de 1200px (TVs, Telas maiores)*/
+@media (min-width: 1200px) {
+    h5 {
+        background-color: darkmagenta;
+    }
+}

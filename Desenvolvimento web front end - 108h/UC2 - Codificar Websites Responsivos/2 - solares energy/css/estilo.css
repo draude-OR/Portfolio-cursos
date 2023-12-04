@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/******* estilos mais gerais pelo corpo todo  *******/
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+/* rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* barra de rolagem */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #21325B;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #F1F1F4;
+    border-radius: 20px;
+}
+
+/****** formatar titulos  ********/
+h1,
+h2,
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #231733;
+}
+
+/*************************** Formatar nav ******************************/
+nav {
+    background-color: #261838;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* logo do site */
+nav div>a {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 16px;
+    font-size: 2rem;
+    color: #f4f4f1;
+    text-decoration: none;
+}
+
+nav div ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 16px;
+}
+
+nav div ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav div ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #F1F1F4;
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav div ul li a:hover {
+    color: #21325B;
+    text-shadow: 0px 0px 15px black;
+    background-color: #F1F1F4;
+    transition: color 0.5s;
+    transition: background 0.6s;
+}
+
+/* menu suspenso(dropdown) */
+nav div ul li ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+nav div ul li:hover ul {
+    display: flex;
+}
+
+nav div ul li ul li {
+    background-color: #261838dc;
+    font-style: italic;
+    z-index: 1;
+}
+
+
+
+/******************************** cabeçalho *******************************/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/cabeçalho.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+header h1 {
+    color: #F1F1F4;
+    text-shadow: 2px 2px #eaa92b;
+}
+
+header p {
+    color: #F1F1F4;
+    text-shadow: 0px 0px 10px black;
+    margin-bottom: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+header a {
+    color: #21325B;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px black;
+    background-color: #F1F1F4;
+    padding: 10px 30px;
+    font-size: 0.8em;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 15px;
+}
+
+header a:hover {
+    border: 1px solid #F1F1F4;
+    background-color: #261838;
+    box-shadow: 0px 0px 10px #F1F1F4;
+    color: #F1F1F4;
+    transition: background 0.3s;
+}
+
+/******************************* sobre **************************************/
+section#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #261838;
+    padding: 30px 20px 20px 20px;
+}
+
+section#sobre h2 {
+    color: #F1F1F4;
+    margin-bottom: 20px;
+}
+
+section#sobre p {
+    color: #F1F1F4;
+    margin-bottom: 20px;
+}
+
+section#sobre a {
+    color: #21325B;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px black;
+    background-color: #F1F1F4;
+    padding: 10px 30px;
+    font-size: 0.8em;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+section#sobre a:hover {
+    border: 1px solid #F1F1F4;
+    background-color: #261838;
+    box-shadow: 0px 0px 10px #F1F1F4;
+    color: #F1F1F4;
+    transition: background 0.3s;
+}
+
+.titulovideo {
+    padding-top: 35px;
+}
+
+section#sobre iframe {
+    padding-top: 30px;
+    height: 300px;
+    width: 330px;
+}
+
+/********************************* serviços *******************************/
+section#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+section#servicos h2 {
+    margin: 30px;
+}
+
+section#servicos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+/********************************** produtos   *******************************/
+section#produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+section#produtos h2 {
+    margin: 30px;
+}
+
+section#produtos img {
+    width: 100%;
+}
+
+/********************************** contato *********************************/
+section#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+section#contato h2 {
+    margin: 30px;
+}
+
+section#contato div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+section#contato div a {
+    text-decoration: none;
+    color: #21325B;
+    font-weight: bold;
+}
+
+section#contato div a:hover {
+    opacity: .8;
+}
+
+/******************************** rodapé ***********************************/
+footer {
+    background-color: #261838;
+    padding: 20px;
+    color: #F1F1F4;
+    text-align: center;
+    font-weight: 500;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFDA7E;
+}
+
+footer a:hover {
+    color: #63615c;
+    text-shadow: 0 0 10px black;
+}
+
+/********************************* Agora vamos fazer a MQ(responsividade) *********************/
+@media screen and (min-width:768px) {
+
+    /* NAV */
+    nav {
+        height: 75px;
+    }
+
+    nav div {
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1000px;
+        margin: auto;
+        align-items: start;
+    }
+
+    nav div ul {
+        flex-direction: row;
+        width: 70%;
+        align-items: start;
+    }
+
+    /* cabeçalho */
+    header {
+        height: 60vh;
+        justify-content: center;
+    }
+
+    /* sobre */
+    section#sobre {
+        height: 80vh;
+        justify-content: center;
+        min-height: 30vh;
+    }
+
+    section#sobre p {
+        max-width: 1000px;
+        margin: auto;
+        text-align: justify;
+    }
+
+    section#sobre iframe {
+        width: 700px;
+        height: 400px;
+    }
+
+    /* serviços */
+    section#servicos {
+        flex-direction: row;
+        margin: auto;
+        flex-wrap: wrap;
+        max-width: 1000px;
+    }
+
+    section#servicos h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    section#servicos div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+
+    /* Produtos */
+    section#produtos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    section#produtos h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    section#produtos img {
+        width: 33.3333333%;
+    }
+
+    /* contato */
+    section#contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    section#contato h2, section#contato p {
+        width: 100%;
+    }
+}
