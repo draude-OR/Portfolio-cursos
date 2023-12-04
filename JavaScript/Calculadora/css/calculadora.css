@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 25px;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(17, 17, 17, 0.582);
+}
+
+section {
+    border: solid 2px;
+    width: 23vw;
+    height: 80vh;
+    border-radius: 30px;
+    border: solid 5px white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #000;
+}
+
+
+.ce-c {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+
+.ce-c button {
+    width: 40%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.operacoes {
+    display: grid;
+    grid-template-columns: repeat(4, 95px);
+    grid-template-rows: repeat(5, 95px);
+    gap: 10px;
+}
+
+.operacoes input,
+button {
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    background-color: rgb(77, 77, 77);
+    }
+
+.zero {
+    width: 200px;
+    height: 95px;
+    border-radius: 70px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: rgb(77, 77, 77);
+}
+
+.btn-inferior {
+    width: 95px;
+    height: 95px;
+    border-radius: 90px;
+    border: none;
+    cursor: pointer;
+    margin-right: 4px;
+    background-color: rgb(77, 77, 77);
+}
+
+.alinhar-btn {
+    position: absolute;
+    margin-top: 625px;
+}
+
+.displayandigual {
+    display: flex;
+    gap: 15px;
+}
+
+.displayandigual input {
+    width: 40%;
+    height: 50%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #000;
+    color: #fff;
+}
+
+
+.displayandigual .exibir {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.exibir .box1 {
+    border: solid 1px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.gap-caixas {
+    margin-bottom: 20px;
+}
+
+.caixa {
+    border-bottom: solid 2px;
+    height: 30%;
+    width:30%;
+    display: flex;
+    align-items: end;
+    margin-top: 90px;
+    margin-left: 10px;
+}
+
+.cor-operadores {
+    background-color: rgb(255, 123, 0);
+}
